@@ -15,5 +15,4 @@ for (let x = 0; x < input; x++){
     let i = prompt(`${x+1}-Elementni kiriting`)
     arr.push(i)
 }
-console.log(arr)
 alert(getFirstValue(arr))
