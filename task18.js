@@ -18,7 +18,7 @@ function sumLoss(stolenItems){
     }
     else{
         let arr = Object.values(stolenItems)
-        let result = arr.reduce((sum, current) => sum + current, 0);
+        let result = arr.reduce((sum,current) => sum + current, 0);
         return result
     }
 }

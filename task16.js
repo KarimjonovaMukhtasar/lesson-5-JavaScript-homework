@@ -10,6 +10,7 @@ arrayOfMultiples(7)(5) ➞ [7, 14, 21, 28, 35]
 arrayOfMultiples(12, 10) ➞ [12, 24, 36, 48, 60, 72, 84, 96, 108, 120]
 arrayOfMultiples(17, 6) ➞ [17, 34, 51, 68, 85, 102]
 */
+/* 1-USUL REKURSIYASIZ: 
 function arrayofMultiples(num,length){
     let arr = []
     for (let i = 0; i < length; i++){
@@ -18,7 +19,15 @@ function arrayofMultiples(num,length){
     }
     return arr
 }
-
+*/
+// 2-USUL REKURSIYA BILAN 
+function arrayofMultiples(number=4, length=4, i = 1, arr = []) {
+    if (i > length) {
+        return arr
+    }
+    arr.push(number * i)
+    return arrayofMultiples(number, length, i + 1, arr)
+}
 let input = Number(prompt("Enter the number"))
 let limit = Number(prompt("Enter the limit"))
-alert(arrayofMultiples(input,limit))
+console.log(arrayofMultiples(input, limit));

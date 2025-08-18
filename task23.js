@@ -7,5 +7,14 @@ multiplyNums("2, 3") ➞ 6
 multiplyNums("1, 2, 3, 4") ➞ 24
 multiplyNums("54, 75, 453, 0") ➞ 0
 multiplyNums("10, -2") ➞ -20
-
 */
+function multiplyNums(str){
+    let sum = 1
+    for (let i = 0; i < str.length; i++){
+        sum = sum * (str[i])
+    }
+    return sum
+}
+let str = prompt("Sonlarni probel bilan ajratib kiriting>>> ")
+str = str.split(" ").map(item => Number(item.trim()))
+alert(multiplyNums(str))

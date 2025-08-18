@@ -10,3 +10,14 @@ doubleFactorial(9) ➞ 945
 doubleFactorial(14) ➞ 645120
 
 */
+function doubleFactorial(number, i=1, sum = 1){
+    if( i > number){
+        return sum
+    }
+    else{
+        sum = sum * i 
+        return doubleFactorial(number, i+=2,sum )
+    }
+}
+let input = Number(prompt("Sonni kiriting>>>> "))
+alert(doubleFactorial(input))

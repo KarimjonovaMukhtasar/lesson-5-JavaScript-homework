@@ -9,3 +9,13 @@ reversibleInclusiveList(10, 20) ➞[10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
 reversibleInclusiveList(24, 17) ➞[24, 23, 22, 21, 20, 19, 18, 17]
 
 */
+function reversibleInclusiveList(num1,num2){
+    let result = []
+    for (let i = num1; i <= num2; i++){
+        result.push(i)
+    }
+    return result
+}
+let num1 = prompt("BOSHLANG'ICH CHEGARANI KIRITING>>>>")
+let num2 = prompt("OXIRGI CHEGARANI KIRITNG")
+alert(reversibleInclusiveList(num1,num2))

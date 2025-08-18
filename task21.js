@@ -8,17 +8,13 @@ uniqueArr([3, -3, -3, 5, 5, -6, -2, -4, -1, 3]) ➞ [3, 5]
 uniqueArr([10, 6, -12, 13, 5, 5, 13, 6, 5]) ➞ [10, 6, 13, 5]
 */
 function UniqueArr(arr){
-    let quantity = {}
-    for(let key of arr){
-                quantity[key] = (quantity[key] || 0) + 1
-            }
-    let arry = Object.entries(quantity)
-    arry = arry.filter(num => quantity[num] === 1  && num > 0)
-    var res = []
-    for (let key of arry){
-        res.push(key[0])
+   let result = []
+    for (let i = 0; i < arr.length; i++){
+        if (!result.includes(arr[i]) && arr[i] > 0 ){
+            result.push(arr[i])
         }
-        return arry
+   }
+   return result
 }
 let input = prompt("Enter the numbers>>>>")
 let arr = input.split(" ").map(item => Number(item.trim()))
